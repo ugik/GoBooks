@@ -1,0 +1,21 @@
+{{ define "style" }}{{ end }}
+
+{{ template "base" }}
+
+Add new book:<br><br>
+
+<form action="/books/create_book" method="post">
+   <table>
+    <tr><td align="right">ISBN:<input type="text" name="isbn"> </td></tr>
+    <tr><td align="right">Title:<input type="text" name="title"> </td></tr>
+    <tr><td align="right">Author:<input type="text" name="author"> </td></tr>
+    <tr><td align="right">Price:<input type="text" name="price"> </td></tr>
+    <tr><td>
+    <br>
+    <input type="submit" value="Add"> &nbsp; <a href="/books">Cancel</a></td>
+    </tr>
+   </table>
+</form>
+
+</body>
+</html>

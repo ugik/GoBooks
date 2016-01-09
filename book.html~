@@ -1,0 +1,16 @@
+{{ define "style" }}{{ end }}
+
+{{ template "base" }}
+
+Book information:<br><br>
+<table>
+{{range .}}
+    <tr><td> {{.Isbn}} </td></tr>
+    <tr><td> Title: {{.Title}} </td></tr>
+    <tr><td> Author: {{.Author}} </td></tr>
+    <tr><td> Price: {{.Price}} </td></tr>
+{{end}}
+</table>
+
+</body>
+</html>

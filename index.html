@@ -1,0 +1,28 @@
+{{ define "style" }}
+<style>
+   tr:nth-of-type(odd) { background-color:#ccc; }
+</style>
+{{ end }}
+
+<!-- include base template -->
+{{ template "base" }}
+
+<body>
+
+Bookstore index:<br><br>
+<table>
+{{range .}}
+    <tr>
+    <td> <a href="/books/show?isbn={{.Isbn}}">{{.Isbn}}</a> </td>
+    <td> <a href="/books/delete_book?isbn={{.Isbn}}">Del</a> </td>
+    <td> {{.Title}} </td>
+    <td> {{.Author}} </td>
+    <td> {{.Price}} </td>
+    </tr>
+{{end}}
+</table>
+<br>
+<a href="/books/create_book">Add Book</a>
+</body>
+</html>
+
