@@ -1,6 +1,14 @@
 # Golang Bookstore
 
-##### Bookstore sample app showing CRUD functions against RDBMS with separate dataserver (serves JSON) and webserver (renders HTML).
+##### Bookstore sample app showing classic CRUD data functions.
+
+*Minimalist implementation, no web-framework, or ORM.*
+
+Examples:
+* Data layer separated from rendering layer to show example typical with the need for multiple different client types (web, mobile)
+* JSON data serving -> marshal and unmarshal
+* reusable model and db definitions
+* HTML templates with inheritence
 
 :+1: props to [practical-persistence]( http://www.alexedwards.net/blog/practical-persistence-sql) for Golang sql examples
 
@@ -50,13 +58,15 @@ Add Book
 
 #### endpoints:
 
- * /books
- * /books/show?isbn=#
- * /books/create_book
- * /books/delete_book?isbn=#
+ * LIST /books
+ * SHOW /books/show?isbn=#
+ * CREATE /books/create_book
+ * DELETE /books/delete_book?isbn=#
  * UPDATE **TBD*
 
 markdown created with http://jbt.github.io/markdown-editor
+
+
 
 
 
